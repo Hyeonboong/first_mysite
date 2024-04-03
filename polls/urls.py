@@ -1,5 +1,5 @@
 # polls 폴더에 urls.py가 없어서 새로 생성
-from django.urls import path
+from django.urls import path,include
 
 
 
@@ -18,7 +18,7 @@ urlpatterns = [
     path('question/<int:pk>/update/', views.QuestionupdateView.as_view(), name='question_update'),
     path('question/<int:pk>/choice/new/', views.ChoiceCreateView.as_view(), name='choice_new'),
     path('choice/<int:pk>/update/', views.ChoiceUpdateView.as_view(), name='choice_update'),
-    path('question/<int:pk>/delete/', views.QuestionDeleteView.as_view(), name='question_delete')
-
+    path('question/<int:pk>/delete/', views.QuestionDeleteView.as_view(), name='question_delete'),
+    
 
 ]
